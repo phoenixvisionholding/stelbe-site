@@ -1,0 +1,82 @@
+/* Stelbe, vitrine. Aucune ressource chargée ailleurs que sur stelbe.com. */
+@font-face { font-family: "Space Grotesk"; font-style: normal; font-weight: 400; font-display: swap; src: url("polices/space-grotesk-400.woff2") format("woff2"); }
+@font-face { font-family: "Space Grotesk"; font-style: normal; font-weight: 700; font-display: swap; src: url("polices/space-grotesk-700.woff2") format("woff2"); }
+
+:root {
+  --fond: #ffffff;
+  --fond-calme: #f6f7f7;
+  --texte: #16242b;
+  --texte-courant: #43555c;
+  --texte-doux: #5a6a70;
+  --trait: #dfe4e6;
+  --ardoise: #0f1a1f;
+  --action: #0a6a6c;
+  --action-survol: #085456;
+  --titre-1: clamp(34px, 5.6vw, 62px);
+  --titre-2: clamp(22px, 2.6vw, 28px);
+  --chapeau: clamp(17px, 1.4vw, 20px);
+  --corps: clamp(16px, 1.25vw, 17px);
+  --mention: clamp(13px, 1vw, 14px);
+  --intertitre: clamp(12px, 1.1vw, 13px);
+  --espace-2: 8px; --espace-3: 12px; --espace-4: 16px; --espace-6: 24px;
+  --espace-8: 32px; --espace-11: 44px; --espace-14: 56px; --espace-22: 88px;
+  --rayon-s: 8px;
+  color-scheme: light;
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--fond); color: var(--texte);
+  font-family: "Space Grotesk", system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-size: var(--corps); line-height: 1.6;
+  min-height: 100vh; display: flex; flex-direction: column;
+}
+a { color: var(--action); }
+a:hover { color: var(--action-survol); }
+:focus-visible { outline: 3px solid var(--action); outline-offset: 3px; }
+
+.cadre { width: 100%; max-width: 1080px; margin: 0 auto; padding: 0 var(--espace-6); }
+@media (max-width: 620px) { .cadre { padding: 0 var(--espace-4); } }
+
+/* En-tête */
+.entete { background: var(--ardoise); }
+.entete .cadre { display: flex; align-items: center; min-height: 72px; }
+.marque { display: inline-flex; align-items: center; gap: var(--espace-3); color: #ffffff; text-decoration: none; font-weight: 700; font-size: 22px; letter-spacing: -0.01em; }
+.marque:hover { color: #ffffff; }
+
+main { flex: 1; }
+
+/* Accueil */
+.accueil { padding: var(--espace-22) 0; }
+.intertitre { font-size: var(--intertitre); font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--texte-doux); margin: 0 0 var(--espace-4); }
+h1 { font-size: var(--titre-1); line-height: 1.08; letter-spacing: -0.02em; margin: 0 0 var(--espace-8); max-width: 16ch; }
+.chapo { font-size: var(--chapeau); color: var(--texte-courant); max-width: 38em; margin: 0 0 var(--espace-6); }
+.bouton {
+  display: inline-flex; align-items: center; justify-content: center; min-height: 52px;
+  padding: 0 var(--espace-8); margin-top: var(--espace-6);
+  background: var(--action); color: #ffffff; border-radius: var(--rayon-s);
+  font-weight: 700; text-decoration: none;
+}
+.bouton:hover { background: var(--action-survol); color: #ffffff; }
+.bouton-note { display: block; margin-top: var(--espace-3); font-size: var(--mention); color: var(--texte-doux); }
+
+/* Pages légales */
+.legal { padding: var(--espace-14) 0 var(--espace-22); max-width: 46em; }
+.legal h1 { font-size: var(--titre-2); max-width: none; margin-bottom: var(--espace-3); line-height: 1.2; }
+.legal .date { color: var(--texte-doux); font-size: var(--mention); margin: 0 0 var(--espace-8); }
+.legal h2 { font-size: 19px; line-height: 1.3; margin: var(--espace-11) 0 var(--espace-3); }
+.legal h3 { font-size: 17px; margin: var(--espace-6) 0 var(--espace-2); }
+.legal p, .legal li { color: var(--texte-courant); }
+.legal sup { font-size: 0.7em; line-height: 0; }
+.legal p { margin: 0 0 var(--espace-3); }
+.legal ul { margin: 0 0 var(--espace-3); padding-left: 1.2em; }
+.legal li { margin-bottom: var(--espace-2); }
+.legal strong { color: var(--texte); }
+.retour { display: inline-block; margin-bottom: var(--espace-8); font-size: var(--mention); }
+
+/* Pied de page */
+.pied { background: var(--fond-calme); border-top: 1px solid var(--trait); padding: var(--espace-8) 0; font-size: var(--mention); color: var(--texte-courant); }
+.pied p { margin: 0 0 var(--espace-3); }
+.pied nav { display: flex; flex-wrap: wrap; gap: var(--espace-2) var(--espace-6); }
+.pied a { color: var(--texte); }
