@@ -61,6 +61,15 @@ h1 { font-size: var(--titre-1); line-height: 1.08; letter-spacing: -0.02em; marg
 .bouton:hover { background: var(--action-survol); color: #ffffff; }
 .bouton-note { display: block; margin-top: var(--espace-3); font-size: var(--mention); color: var(--texte-doux); }
 
+/* Blocs de l'accueil */
+.bloc { padding: var(--espace-14) 0; border-top: 1px solid var(--trait); }
+.bloc--calme { background: var(--fond-calme); }
+.trois { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--espace-8); }
+.trois li { color: var(--texte-courant); line-height: 1.6; }
+.trois strong { display: block; color: var(--texte); margin-bottom: var(--espace-2); }
+.texte { color: var(--texte-courant); max-width: 42em; margin: 0; }
+@media (max-width: 760px) { .trois { grid-template-columns: 1fr; gap: var(--espace-6); } .bloc { padding: var(--espace-11) 0; } }
+
 /* Pages légales */
 .legal { padding: var(--espace-14) 0 var(--espace-22); max-width: 46em; }
 .legal h1 { font-size: var(--titre-2); max-width: none; margin-bottom: var(--espace-3); line-height: 1.2; }
